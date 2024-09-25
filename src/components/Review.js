@@ -1,16 +1,18 @@
 import React from 'react'
 
-const Review = (props) => {
-  return (
-    <div className="review">
-      <p className='author' id={`author-id${props.id}`}>{props.name}</p>
-      <p className='job'>{props.job}</p>
-      <img style={{
-        width:"100px"
-      }} className='person-img' src={props.image} alt=""/>
-      <p className='info'>{props.text}</p>
-    </div>
-  )
-}
 
-export default Review
+const Review = ({ name, id, image, text, job }) => {
+    return (
+      <article className="review">
+        <div>
+          <img src={image} alt={name} />
+          <h4 id={`author-${id}`}>{name}</h4>
+          <p>{job}</p>
+          <p>{text}</p>
+        </div>
+      </article>
+    );
+  };
+  
+  export default Review;
+  
