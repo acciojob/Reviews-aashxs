@@ -2,7 +2,7 @@ import React from 'react'
 
 const Review = (props) => {
   return (
-    <div>
+    <div className="review">
       <p className='author' id={`author-id${props.id}`}>{props.name}</p>
       <p className='job'>{props.job}</p>
       <img style={{

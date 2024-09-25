@@ -17,11 +17,12 @@ const App = () => {
     }
 
     const random = ()=>{
-      let num =  Math.floor(Math.random() * 4) + 1;
-      if(num!=current)
-      {Next(num)}else{
-        num = Math.floor(Math.random() * 4) + 1;
-      }
+     
+      let num = current;
+  while (num === current) {
+    num = Math.floor(Math.random() * 4) + 1;
+  }
+  Next(num);
     }
     
     const reviews =[
